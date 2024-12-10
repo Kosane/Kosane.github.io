@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FreezeBalls</title>
+	<link rel="icon" href="imgs/icon.png">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Freezing Balls</h1>
+			<nav>
+				<a href="index.html" class="nav-link">Первая игра</a>
+			</nav>
+		</header>
+
+		<main>
+			<div class="description">
+				Если шарик за 4 секунды не успеет выбраться, то он заморозится
+			</div>
+
+			<div class="game-container_second">
+
+
+				<div id="canvas-wrapper"></div>
+
+
+				<div class="controls-panel">
+					<div class="timer-container">
+						<div id="timer">4.00s</div>
+					</div>
+					<div class="control-group">
+						<label for="radius-slider" class="text">
+							Радиус окружности
+							<span id="radius-value" class="slider-value">200</span>
+						</label>
+						<input type="range" id="radius-slider" min="20" max="300" step="0.01" value="200">
+					</div>
+
+					<div class="control-group">
+						<label for="arc-size-slider" class="text">
+							Размер дуги для побега
+							<span id="arc-size-value" class="slider-value">3</span>
+						</label>
+						<input type="range" id="arc-size-slider" min="0" max="6" step="0.01" value="3">
+					</div>
+
+					<div class="control-group">
+						<label for="ball-radius-slider" class="text">
+							Радиус шариков
+							<span id="ball-radius-value" class="slider-value">200</span>
+						</label>
+						<input type="range" id="ball-radius-slider" min="20" max="300" step="0.01" value="200">
+					</div>
+
+					<div class="control-group">
+						<label for="speed-slider" class="text">
+							Скорость
+							<span id="speed-value" class="slider-value">7</span>
+						</label>
+						<input type="range" id="speed-slider" min="1" max="20" step="0.01" value="7">
+					</div>
+
+
+					<div class="control-group">
+						<label for="gravity-slider" class="text">
+							Гравитация
+							<span id="gravity-value" class="slider-value">0.1</span>
+						</label>
+						<input type="range" id="gravity-slider" min="0" max="1" step="0.01" value="0.1">
+					</div>
+
+					<div class="control-group">
+						<label for="trail-length-slider" class="text">
+							Длина трейла
+							<span id="trail-length-value" class="slider-value">10</span>
+						</label>
+						<input type="range" id="trail-length-slider" min="0" max="50" step="0.01" value="10">
+					</div>
+
+					<div class="control-group">
+						<label for="trail-color-alpha-slider" class="text">
+							Непрозрачность трейла
+							<span id="trail-color-alpha-value" class="slider-value">30</span>
+						</label>
+						<input type="range" id="trail-color-alpha-slider" min="0" max="255" step="0.01" value="30">
+					</div>
+
+					<div class="button-group">
+						<button id="reset-game-btn" class="btn">Сброс</button>
+					</div>
+
+					<div class="toggle-group">
+						<button id="toggle-do-trail-decrease" class="btn toggle-btn">
+							Альтернативный трейл: Выкл
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</main>
+	</div>
+
+	<script src="libs/p5.min.js"></script>
+	<script src="libs/p5.sound.min.js"></script>
+	<script defer src="secondGame.js"></script>
+</body>
+
+</html>
